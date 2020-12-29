@@ -1,0 +1,12 @@
+[package]
+name = "rustwasmhelloworld"
+version = "0.1.0"
+authors = ["novito <roigarderiu@gmail.com>"]
+edition = "2018"
+
+[lib]
+// we are indicating that this project will expose a C-style dynamic library.
+// This will be used by other linkers to product a WebAssembly module.
+crate-type = ["cdylib"]
+
+[dependencies]
